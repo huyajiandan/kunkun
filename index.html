@@ -298,9 +298,13 @@
                 var imageElement = document.getElementById("dangao");
                 imageElement.style.display = "none";
             }}
-            document.getElementById("time1").innerHTML = diff3Days + "天" + diff3Hours + "小时" + diff3Minutes + "分钟" + diff3Seconds + "秒就是小希你" + (todayYear - 2003) + "岁生日🎂了"
+           if(t3<t2){
+            document.getElementById("time1").innerHTML = diff3Days + "天" + diff3Hours + "小时" + diff3Minutes + "分钟" + diff3Seconds + "秒就是小希你" + ((todayYear - 2003)+1) + "岁生日🎂了"
+        document.getElementById("time2").innerHTML = diffDays + "天" + diffHours + "小时" + diffMinutes + "分钟" + diffSeconds + "秒是" + (todayYear + 1)+"农历新年🧧"
+            }else{
+                document.getElementById("time1").innerHTML = diff3Days + "天" + diff3Hours + "小时" + diff3Minutes + "分钟" + diff3Seconds + "秒就是小希你" + (todayYear - 2003) + "岁生日🎂了"
         document.getElementById("time2").innerHTML = diffDays + "天" + diffHours + "小时" + diffMinutes + "分钟" + diffSeconds + "秒是" + todayYear + "农历新年🧧"
-    
+            }
     }
     time()
 </script>
